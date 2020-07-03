@@ -5,8 +5,11 @@
 // (C) Copyright 2020 Adam K Dean
 
 #include <Arduino.h>
+#include <ESP8266HTTPClient.h>
+#include <ESP8266WiFi.h>
+#include "libs/SBUS.h"
+#include "wifi.h"
 #include "main.h"
-#include "SBUS.h"
 
 // a SBUS object, which is on hardware serial port 1
 SBUS rx(Serial);
