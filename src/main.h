@@ -1,0 +1,1 @@
+void blink(int count, int on, int off);
