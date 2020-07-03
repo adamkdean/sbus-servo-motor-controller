@@ -8,9 +8,8 @@
 #include "main.h"
 #include "SBUS.h"
 
-// a SBUS object, which is on hardware
-// serial port 1
-SBUS rx(Serial1);
+// a SBUS object, which is on hardware serial port 1
+SBUS rx(Serial);
 
 // channel, fail safe, and lost frames data
 float channels[16];
@@ -22,7 +21,7 @@ bool lostFrame;
 //
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(100000);
   pinMode(LED_BUILTIN, OUTPUT);
 
   // begin the SBUS communication
@@ -34,12 +33,28 @@ void setup()
 //
 void loop()
 {
-  blink(1, 250, 250);
+  // char msg[64];
+  // float a0 = analogRead(A0);
+  // sprintf(msg, "A0: %f", a0);
+  // Serial.println(msg);
+
+  // if (Serial.available() > 0)
+  // {
+  //   blink(10, 50, 50);
+  // }
+  // else
+  // {
+  //   blink(1, 50, 950);
+  // }
 
   if (rx.readCal(&channels[0], &failSafe, &lostFrame))
   {
-    Serial.println(channels[0]);
-    blink(1, 500, 500);
+    // Serial.println(channels[0]);
+    blink(10, 50, 50);
+  }
+  else
+  {
+    blink(1, 50, 950);
   }
 }
 
