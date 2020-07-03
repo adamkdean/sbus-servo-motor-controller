@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/1639527/86492238-56925a80-bd65-11ea-8763-8e9960e668e8.png" width="600"><br>
-  sbus-servo-motor-controller<br>
+  <img src="https://user-images.githubusercontent.com/1639527/86492238-56925a80-bd65-11ea-8763-8e9960e668e8.png" width="600"><br><br>
+  Servo/motor control via R-XSR SBUS receiver input<br>
 </p>
 
 ----
