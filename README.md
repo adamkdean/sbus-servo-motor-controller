@@ -9,7 +9,7 @@
 
 ![Inverter](https://user-images.githubusercontent.com/1639527/86492451-18e20180-bd66-11ea-96cb-001294850b62.png)
 
-R1: 10 kΩ, R2: 4.8 kΩ, Transistor: 2N3904 or similar
+R1: 1 kΩ, R2: 10 kΩ, Transistor: 2N4401
 
 > The SBUS signal from the FrSky X-receivers are a serial at 100.000 baud, but it is inverted. Therefore you will need an inverter like the one above in order for the Arduino to read it correct.
 
